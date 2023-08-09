@@ -8,12 +8,10 @@
 import Foundation
 
 protocol GitHubService {
-    #warning("why var")
     var baseURl: String {get}
-    func getGitHubUsers() async throws -> [User]
+    func getGitHubUsers<T: Decodable>() async throws -> T
 }
 
-#warning("Make it through dependencies and make it generic")
 struct NetworkManager: GitHubService {
     var baseURl: String
     private let session: URLSession
@@ -23,10 +21,10 @@ struct NetworkManager: GitHubService {
         self.baseURl = baseURl
     }
     
-    func getGitHubUsers() async throws -> [User] {
+    func getGitHubUsers<T: Decodable>() async throws -> T {
         let url = URL(string: baseURl)!
         let(data, _) = try await self.session.data(from: url)
-        let users = try JSONDecoder().decode([User].self, from: data)
+        let users = try JSONDecoder().decode(T.self, from: data)
         return users
     }
 }

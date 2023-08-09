@@ -20,10 +20,9 @@ class GithubUsersViewModel: ObservableObject {
     func fetchUsers() {
         Task {
             do {
-                let fetchUsers =  try await self.network.getGitHubUsers()
-                print(fetchUsers)
+                let users: [User] = try await self.network.getGitHubUsers()
                 DispatchQueue.main.async {
-                    self.users = fetchUsers
+                    self.users = users
                     self.showError = false
                 }
             } catch {
