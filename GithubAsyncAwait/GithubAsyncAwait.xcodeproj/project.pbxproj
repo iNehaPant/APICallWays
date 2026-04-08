@@ -17,6 +17,10 @@
 		BA46C32B2A82F74800086217 /* GithubUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46C32A2A82F74800086217 /* GithubUsersViewModel.swift */; };
 		BA46C32D2A82F76800086217 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46C32C2A82F76800086217 /* User.swift */; };
 		BA46C32F2A82F77B00086217 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46C32E2A82F77B00086217 /* NetworkManager.swift */; };
+		BAC9F3212A8E7D3900601736 /* GithubUsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC9F3202A8E7D3900601736 /* GithubUsersViewModelTests.swift */; };
+		BAC9F4432A9AB35F00601736 /* MockGitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC9F4422A9AB35F00601736 /* MockGitHubService.swift */; };
+		BAC9F4452A9AB50700601736 /* NetworkMangerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC9F4442A9AB50700601736 /* NetworkMangerTests.swift */; };
+		BAC9F4472A9AB52D00601736 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC9F4462A9AB52D00601736 /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		BA46C32A2A82F74800086217 /* GithubUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersViewModel.swift; sourceTree = "<group>"; };
 		BA46C32C2A82F76800086217 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BA46C32E2A82F77B00086217 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BAC9F3202A8E7D3900601736 /* GithubUsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersViewModelTests.swift; sourceTree = "<group>"; };
+		BAC9F4422A9AB35F00601736 /* MockGitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGitHubService.swift; sourceTree = "<group>"; };
+		BAC9F4442A9AB50700601736 /* NetworkMangerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMangerTests.swift; sourceTree = "<group>"; };
+		BAC9F4462A9AB52D00601736 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 				BA46C3272A82F72900086217 /* ViewModel */,
 				BA46C3292A82F73700086217 /* Network */,
 				BA46C3002A82EC6800086217 /* Assets.xcassets */,
+				BAC9F4412A9AB33500601736 /* Mock */,
 				BA46C3022A82EC6800086217 /* Preview Content */,
 			);
 			path = GithubAsyncAwait;
@@ -123,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				BA46C30D2A82EC6800086217 /* GithubAsyncAwaitTests.swift */,
+				BAC9F3202A8E7D3900601736 /* GithubUsersViewModelTests.swift */,
+				BAC9F4442A9AB50700601736 /* NetworkMangerTests.swift */,
 			);
 			path = GithubAsyncAwaitTests;
 			sourceTree = "<group>";
@@ -166,6 +177,15 @@
 				BA46C32E2A82F77B00086217 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BAC9F4412A9AB33500601736 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				BAC9F4422A9AB35F00601736 /* MockGitHubService.swift */,
+				BAC9F4462A9AB52D00601736 /* MockURLProtocol.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC9F4472A9AB52D00601736 /* MockURLProtocol.swift in Sources */,
 				BA46C32D2A82F76800086217 /* User.swift in Sources */,
 				BA46C2FF2A82EC6600086217 /* GithubView.swift in Sources */,
+				BAC9F4432A9AB35F00601736 /* MockGitHubService.swift in Sources */,
 				BA46C32F2A82F77B00086217 /* NetworkManager.swift in Sources */,
 				BA46C2FD2A82EC6600086217 /* GithubAsyncAwaitApp.swift in Sources */,
 				BA46C32B2A82F74800086217 /* GithubUsersViewModel.swift in Sources */,
@@ -310,6 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC9F4452A9AB50700601736 /* NetworkMangerTests.swift in Sources */,
+				BAC9F3212A8E7D3900601736 /* GithubUsersViewModelTests.swift in Sources */,
 				BA46C30E2A82EC6800086217 /* GithubAsyncAwaitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

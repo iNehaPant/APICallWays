@@ -30,6 +30,6 @@ struct GithubView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GithubView(vm: GithubUsersViewModel(network: NetworkManager(session: URLSession.shared, baseURl: "")))
+        GithubView(vm: GithubUsersViewModel(network: NetworkManager(session: URLSession.shared, baseURL: "")))
     }
 }

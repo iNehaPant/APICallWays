@@ -12,7 +12,7 @@ struct GithubAsyncAwaitApp: App {
     var body: some Scene {
         WindowGroup {
             GithubView(vm: GithubUsersViewModel(network: NetworkManager(session: URLSession.shared,
-                                                                        baseURl: "https://api.github.com/users")))
+                                                                        baseURL: "https://api.github.com/users")))
         }
     }
 }

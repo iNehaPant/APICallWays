@@ -8,21 +8,21 @@
 import Foundation
 
 protocol GitHubService {
-    var baseURl: String {get}
+    var baseURL: String {get}
     func getGitHubUsers<T: Decodable>() async throws -> T
 }
 
 struct NetworkManager: GitHubService {
-    var baseURl: String
+    var baseURL: String
     private let session: URLSession
     
-    init(session: URLSession, baseURl: String) {
+    init(session: URLSession, baseURL: String) {
         self.session = session
-        self.baseURl = baseURl
+        self.baseURL = baseURL
     }
     
     func getGitHubUsers<T: Decodable>() async throws -> T {
-        let url = URL(string: baseURl)!
+        let url = URL(string: baseURL)!
         let(data, _) = try await self.session.data(from: url)
         let users = try JSONDecoder().decode(T.self, from: data)
         return users
